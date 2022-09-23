@@ -1,0 +1,4 @@
+main:
+  output: ckanext-webview/%(version)s_webview.css
+  contents:
+    - css/webview.css

@@ -1,0 +1,3 @@
+{% import 'macros/form.html' as form %}
+
+{{ form.input('web_url', id='field-web_url', label=_('URL'), placeholder=_('if blank, uses resource url'), value=data.web_url, error=errors.web_url, classes=['control-full', 'control-large']) }}
