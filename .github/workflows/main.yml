@@ -13,6 +13,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build images
+        env:
+          DOCKER_BUILDKIT: 0
         run: docker-compose build
 
       - name: Run tests
@@ -20,7 +22,5 @@ jobs:
 
       - name: Run coveralls
         env:
-          
           COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
         run: docker-compose run -e COVERALLS_REPO_TOKEN ckan coveralls --service=github
