@@ -20,4 +20,5 @@ RUN pip3 install -e .[test]
 ENTRYPOINT ["/bin/bash", "docker/entrypoint.sh"]
 
 # run the tests with coverage output
-CMD ["pytest", "--cov=ckanext.versioned_datastore", "--ckan-ini=test.ini", "tests"]
+#CMD ["pytest", "--cov=ckanext.webview", "--ckan-ini=test.ini", "tests"]
+CMD ["/bin/bash"]

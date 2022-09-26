@@ -15,7 +15,8 @@ def is_valid_url(value, context):
     :param context:
     :returns:
     '''
-    pattern = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
+    # from https://urlregex.com
+    pattern = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*(),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
     if re.search(pattern, value, re.IGNORECASE):
         return value
 

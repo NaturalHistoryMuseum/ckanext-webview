@@ -54,19 +54,6 @@ Path variables used below:
   ckan.plugins = ... webview
   ```
 
-# Configuration
-
-These are the options that can be specified in your .ini config file.
-
-Name|Description|Options
---|--|--
-|||
-
-
-# Usage
-
-
-
 # Testing
 
 _Test coverage is currently extremely limited._
