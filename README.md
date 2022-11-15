@@ -6,6 +6,7 @@
 [![Coveralls](https://img.shields.io/coveralls/github/NaturalHistoryMuseum/ckanext-webview/main?style=flat-square)](https://coveralls.io/github/NaturalHistoryMuseum/ckanext-webview)
 [![CKAN](https://img.shields.io/badge/ckan-2.9.1-orange.svg?style=flat-square)](https://github.com/ckan/ckan)
 [![Python](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8-blue.svg?style=flat-square)](https://www.python.org/)
+[![Docs](https://img.shields.io/readthedocs/ckanext-webview?style=flat-square)](https://ckanext-webview.readthedocs.io)
 
 _A CKAN extension that adds a view for displaying generic/arbitrary URLs._
 
@@ -54,12 +55,19 @@ Path variables used below:
   ckan.plugins = ... webview
   ```
 
+# Configuration
+
+There are currently no options that can be specified in your .ini config file.
+
+
+# Usage
+
+After enabling this extension in the list of plugins, the Web view should become available for resources. The URL can be overridden when creating the view.
+
+
 # Testing
 
-_Test coverage is currently extremely limited._
-
-To run the tests in this extension, there is a Docker compose configuration available in this
-repository to make it easy.
+There is a Docker compose configuration available in this repository to make it easier to run tests.
 
 To run the tests against ckan 2.9.x on Python3:
 
@@ -76,4 +84,4 @@ docker-compose build
 docker-compose run ckan
 ```
 
-The ckan image uses the Dockerfile in the `docker/` folder which is based on `openknowledge/ckan-dev:2.9'.
+The ckan image uses the Dockerfile in the `docker/` folder.
