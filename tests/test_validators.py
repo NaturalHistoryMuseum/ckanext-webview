@@ -7,7 +7,6 @@ from ckan.plugins import toolkit
 
 
 class TestIsValidURL(object):
-
     def test_valid_https(self):
         url = 'https://data.nhm.ac.uk'
         assert is_valid_url(url, MagicMock())
@@ -28,7 +27,6 @@ class TestIsValidURL(object):
 
 
 class TestNotDatastore(object):
-
     def test_valid_url(self):
         url = 'https://data.nhm.ac.uk'
         key = ('web_url',)
