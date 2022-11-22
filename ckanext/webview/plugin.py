@@ -11,9 +11,9 @@ ignore_empty = toolkit.get_validator('ignore_empty')
 
 
 class WebviewPlugin(SingletonPlugin):
-    '''
+    """
     A CKAN extension that adds a view for displaying generic/arbitrary URLs.
-    '''
+    """
 
     implements(interfaces.IConfigurer, inherit=True)
     implements(interfaces.IResourceView, inherit=True)
@@ -31,9 +31,7 @@ class WebviewPlugin(SingletonPlugin):
             'icon': 'globe',
             'always_available': True,
             'iframed': False,
-            'schema': {
-                'web_url': [not_datastore, ignore_empty, str, is_valid_url]
-            }
+            'schema': {'web_url': [not_datastore, ignore_empty, str, is_valid_url]},
         }
 
     def can_view(self, data_dict):
@@ -41,11 +39,11 @@ class WebviewPlugin(SingletonPlugin):
 
     def setup_template_variables(self, context, data_dict):
         # defaults to the resource URL but can be overridden
-        web_url = data_dict['resource_view'].get('web_url') or data_dict['resource'].get('url')
+        web_url = data_dict['resource_view'].get('web_url') or data_dict[
+            'resource'
+        ].get('url')
 
-        return {
-            'web_url': web_url
-        }
+        return {'web_url': web_url}
 
     def view_template(self, context, data_dict):
         '''

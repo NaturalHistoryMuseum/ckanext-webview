@@ -1,4 +1,7 @@
 main:
   output: ckanext-webview/%(version)s_webview.css
+  filters: less
+  config:
+    LESS_BIN: ../../../../../node_modules/less/bin/lessc
   contents:
-    - css/webview.css
+    - less/webview.less
