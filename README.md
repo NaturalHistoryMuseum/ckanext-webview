@@ -1,3 +1,4 @@
+<!--header-start-->
 <img src=".github/nhm-logo.svg" align="left" width="150px" height="100px" hspace="40"/>
 
 # ckanext-webview
@@ -10,14 +11,18 @@
 
 _A CKAN extension that adds a view for displaying generic/arbitrary URLs._
 
+<!--header-end-->
 
 # Overview
 
+<!--overview-start-->
 This extension allows maintainers to add a simple static message to the top of every page by setting a single configuration option. For example, it can be used to notify users of planned downtime, unexpected issues with the site, or new features.
 
+<!--overview-end-->
 
 # Installation
 
+<!--installation-start-->
 Path variables used below:
 - `$INSTALL_FOLDER` (i.e. where CKAN is installed), e.g. `/usr/lib/ckan/default`
 - `$CONFIG_FILE`, e.g. `/etc/ckan/default/development.ini`
@@ -55,18 +60,25 @@ Path variables used below:
   ckan.plugins = ... webview
   ```
 
+<!--installation-end-->
+
 # Configuration
 
+<!--configuration-start-->
 There are currently no options that can be specified in your .ini config file.
 
+<!--configuration-end-->
 
 # Usage
 
+<!--usage-start-->
 After enabling this extension in the list of plugins, the Web view should become available for resources. The URL can be overridden when creating the view.
 
+<!--usage-end-->
 
 # Testing
 
+<!--testing-start-->
 There is a Docker compose configuration available in this repository to make it easier to run tests.
 
 To run the tests against ckan 2.9.x on Python3:
@@ -85,3 +97,5 @@ docker-compose run ckan
 ```
 
 The ckan image uses the Dockerfile in the `docker/` folder.
+
+<!--testing-end-->
