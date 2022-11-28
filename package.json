@@ -1,6 +1,6 @@
 {
   "name": "ckanext-webview",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A CKAN extension that adds a view for displaying generic/arbitrary URLs.",
   "repository": {
     "type": "git",
