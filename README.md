@@ -1,3 +1,4 @@
+<!--header-start-->
 <img src=".github/nhm-logo.svg" align="left" width="150px" height="100px" hspace="40"/>
 
 # ckanext-webview
@@ -6,17 +7,22 @@
 [![Coveralls](https://img.shields.io/coveralls/github/NaturalHistoryMuseum/ckanext-webview/main?style=flat-square)](https://coveralls.io/github/NaturalHistoryMuseum/ckanext-webview)
 [![CKAN](https://img.shields.io/badge/ckan-2.9.1-orange.svg?style=flat-square)](https://github.com/ckan/ckan)
 [![Python](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8-blue.svg?style=flat-square)](https://www.python.org/)
+[![Docs](https://img.shields.io/readthedocs/ckanext-webview?style=flat-square)](https://ckanext-webview.readthedocs.io)
 
 _A CKAN extension that adds a view for displaying generic/arbitrary URLs._
 
+<!--header-end-->
 
 # Overview
 
+<!--overview-start-->
 This extension allows maintainers to add a simple static message to the top of every page by setting a single configuration option. For example, it can be used to notify users of planned downtime, unexpected issues with the site, or new features.
 
+<!--overview-end-->
 
 # Installation
 
+<!--installation-start-->
 Path variables used below:
 - `$INSTALL_FOLDER` (i.e. where CKAN is installed), e.g. `/usr/lib/ckan/default`
 - `$CONFIG_FILE`, e.g. `/etc/ckan/default/development.ini`
@@ -54,12 +60,26 @@ Path variables used below:
   ckan.plugins = ... webview
   ```
 
+<!--installation-end-->
+
+# Configuration
+
+<!--configuration-start-->
+There are currently no options that can be specified in your .ini config file.
+
+<!--configuration-end-->
+
+# Usage
+
+<!--usage-start-->
+After enabling this extension in the list of plugins, the Web view should become available for resources. The URL can be overridden when creating the view.
+
+<!--usage-end-->
+
 # Testing
 
-_Test coverage is currently extremely limited._
-
-To run the tests in this extension, there is a Docker compose configuration available in this
-repository to make it easy.
+<!--testing-start-->
+There is a Docker compose configuration available in this repository to make it easier to run tests.
 
 To run the tests against ckan 2.9.x on Python3:
 
@@ -76,4 +96,6 @@ docker-compose build
 docker-compose run ckan
 ```
 
-The ckan image uses the Dockerfile in the `docker/` folder which is based on `openknowledge/ckan-dev:2.9'.
+The ckan image uses the Dockerfile in the `docker/` folder.
+
+<!--testing-end-->
