@@ -5,6 +5,7 @@
 # Created by the Natural History Museum in London, UK
 
 from ckan.plugins import SingletonPlugin, implements, interfaces, toolkit
+
 from ckanext.webview.logic.validators import is_valid_url, not_datastore
 
 ignore_empty = toolkit.get_validator('ignore_empty')
@@ -20,8 +21,8 @@ class WebviewPlugin(SingletonPlugin):
 
     ## IConfigurer
     def update_config(self, config):
-        toolkit.add_template_directory(config, u'theme/templates')
-        toolkit.add_resource(u'theme/assets', u'ckanext-webview')
+        toolkit.add_template_directory(config, 'theme/templates')
+        toolkit.add_resource('theme/assets', 'ckanext-webview')
 
     ## IResourceView
     def info(self):
@@ -46,15 +47,15 @@ class WebviewPlugin(SingletonPlugin):
         return {'web_url': web_url}
 
     def view_template(self, context, data_dict):
-        '''
+        """
         :param context:
         :param data_dict:
-        '''
+        """
         return 'views/web_view.html'
 
     def form_template(self, context, data_dict):
-        '''
+        """
         :param context:
         :param data_dict:
-        '''
+        """
         return 'views/web_view_form.html'
