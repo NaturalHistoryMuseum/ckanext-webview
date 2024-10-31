@@ -1,9 +1,9 @@
 from unittest.mock import MagicMock
 
 import pytest
-from ckanext.webview.logic.validators import is_valid_url, not_datastore
-
 from ckan.plugins import toolkit
+
+from ckanext.webview.logic.validators import is_valid_url, not_datastore
 
 
 class TestIsValidURL(object):
